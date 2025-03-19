@@ -3,18 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Museum Interactive Page</title>
+    <title>Museum webpage, Proof of Concept</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button class="reset-button" onclick="showResetConfirmation()">Reset Progress</button>
     <div class="overlay" id="overlay"></div>
+
     <div class="modal" id="modal">
         <h2>Welcome!</h2>
-        <p>Explore the settings! Click on the options you wish to enable and upon the page closing, the webpage will reload with the desired apperance</p>
-        <p>Please free to click on the book at the bottom of the screen to reopen the settings menu! </p>   
+        <p>Explore this Settings Page! Click on the options you wish to enable and upon the page closing, the webpage will reload with the desired apperance</p>
+        <p>Please free to click on the book at the bottom of the screen to reopen the settings menu! </p>  
+        <p>To proceed, click on the two canvases closest to the set of doors, or on the doors themselves to move into the next room!</p> 
         <button onclick="closeModal()">Close</button>
     </div>
-    <img src="images/open-book.jpg" class="book" id="book" alt="Open Book">
+
+    <div class="modal" id="resetModal">
+        <h2>Confirm Reset</h2>
+        <p>Are you sure you want to reset your progress?</p>
+        <button onclick="resetProgress()">Yes</button>
+        <button onclick="closeResetModal()">No</button>
+    </div>
+
+    <div class="modal" id="canvasModal1">
+        <h2>Story 1:</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <div class="modal" id="canvasModal2">
+        <h2>Story 2:</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <div class="set-piece">
+        <div class="set-piece-overlay" id="setPieceOverlay"></div>
+    </div>
+    <div class="door-area" onclick="triggerTransition()"></div>
+    <div class="canvas" id="canvas1" onclick="showCanvasModal(1)"></div>
+    <div class="canvas" id="canvas2" onclick="showCanvasModal(2)"></div>
+    <div class="book-area" id="book"></div>
+
     <script src="scripts/script1.js" defer></script>
 </body>
 </html>
