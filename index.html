@@ -10,11 +10,51 @@
     <button class="reset-button" onclick="showResetConfirmation()">Reset Progress</button>
     <div class="overlay" id="overlay"></div>
 
-    <div class="modal" id="modal">
+    <div class="door-area" onclick="triggerTransition()"></div>
+    <div class="book-area" id="book"></div>
+
+    <div class="canvas" id="canvas1" onclick="showCanvasModal(1)"></div>
+    <div class="canvas" id="canvas2" onclick="showCanvasModal(2)"></div>
+
+    <div class="statue" id="statue1" onclick="showStatueModal(1)"></div>
+    <div class="statue" id="statue2" onclick="showStatueModal(2)"></div>
+    <div class="statue" id="statue3" onclick="showStatueModal(3)"></div>
+    <div class="statue" id="statue4" onclick="showStatueModal(4)"></div>
+    <div class="statue" id="statue5" onclick="showStatueModal(5)"></div>
+    <div class="statue" id="statue6" onclick="showStatueModal(6)"></div>
+
+    <div class="modal" id="welcomeModal">
         <h2>Welcome!</h2>
         <p>Explore this Settings Page! Click on the options you wish to enable and upon the page closing, the webpage will reload with the desired apperance</p>
+
+        <label>
+            <input type="checkbox" id="disableBorders"> Disable Borders
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="increaseFont"> Increase Font Size in Stories
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="changeFont"> Use Lexend + Bionic Reading
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="changeFont"> Use Dyslexie Font
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="changeFont"> Use Stronger Text Contrast
+        </label>
+        <br>
+        <label>
+            <input type="checkbox" id="changeFont"> Use Text to Speech
+        </label>
+        <br>
+        <br>
         <p>Please free to click on the book at the bottom of the screen to reopen the settings menu! </p>  
-        <p>To proceed, click on the two canvases closest to the set of doors, or on the doors themselves to move into the next room!</p> 
+        <p>The big black box at the top of the webpage hides the final completed story, please collect and read all 10 stories to unlock it!</p>
+        <p>To proceed, click on the two canvases closest to the set of doors, some of the statues (relevant story pieces will have a red border), or on the doors themselves to move into the next room!</p> 
         <button onclick="closeModal()">Close</button>
     </div>
 
@@ -37,13 +77,65 @@
         <button onclick="closeModal()">Close</button>
     </div>
 
-    <div class="set-piece">
-        <div class="set-piece-overlay" id="setPieceOverlay"></div>
+    <div class="modal" id="statueModal1">
+        <h2>Story 3:</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <button onclick="closeModal()">Close</button>
     </div>
-    <div class="door-area" onclick="triggerTransition()"></div>
-    <div class="canvas" id="canvas1" onclick="showCanvasModal(1)"></div>
-    <div class="canvas" id="canvas2" onclick="showCanvasModal(2)"></div>
-    <div class="book-area" id="book"></div>
+
+    <div class="modal" id="statueModal2">
+        <h2>Story 4:</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <div class="modal" id="statueModal3">
+        <h2>Story 5:</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    
+    <div class="modal" id="statueModal4">
+        <h2>Story 6:</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    
+    <div class="modal" id="statueModal5">
+        <h2>Story 7:</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    
+    <div class="modal" id="statueModal6">
+        <h2>Story 8:</h2>
+        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+        <button onclick="closeModal()">Close</button>
+    </div>
+
+    <div class="modal" id="final-modal">
+        <h2>Complete Story</h2>
+        <p>Congratulations! You've unlocked the complete story behind the set piece.</p>
+        <button onclick="closeFinalModal()">Close</button>
+      </div>
+
+      <div class="set-piece">
+        <div class="set-piece-overlay" id="setPieceOverlay">
+          <div class="overlay-section" id="overlaySection1"></div>
+          <div class="overlay-section" id="overlaySection2"></div>
+          <div class="overlay-section" id="overlaySection3"></div>
+          <div class="overlay-section" id="overlaySection4"></div>
+          <div class="overlay-section" id="overlaySection5"></div>
+          <div class="overlay-section" id="overlaySection6"></div>
+          <div class="overlay-section" id="overlaySection7"></div>
+          <div class="overlay-section" id="overlaySection8"></div>
+          <div class="overlay-section" id="overlaySection9"></div>
+          <div class="overlay-section" id="overlaySection10"></div>
+        </div>
+      </div>
 
     <script src="scripts/script1.js" defer></script>
 </body>
